@@ -1,4 +1,4 @@
-package step.inout1;
+package step.step1;
 
 import java.util.Scanner;
 

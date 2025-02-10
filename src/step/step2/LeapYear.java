@@ -1,4 +1,4 @@
-package step.condition2;
+package step.step2;
 
 import java.util.Scanner;
 
