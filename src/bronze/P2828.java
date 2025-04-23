@@ -1,8 +1,9 @@
 package bronze;
 
+import java.util.*;
 import java.util.Scanner;
 
-//사과 담기 게임
+//사과 담기 게임 - 그리디 알고리즘
 public class P2828 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -18,10 +19,19 @@ public class P2828 {
 
 
         //사과 위치
-        int[] loc = new int[j];
         for(int i = 0; i < j; i++){
-            loc[i] = sc.nextInt();
+            int apple= sc.nextInt();
+            if(start > apple){
+                answer += start-apple;
+                end -= start - apple;
+                start = apple;
+            } else if(end < apple){
+                answer += apple-end;
+                start += apple-end;
+                end = apple;
+            }
         }
+        System.out.println(answer);
         sc.close();
 
     }
